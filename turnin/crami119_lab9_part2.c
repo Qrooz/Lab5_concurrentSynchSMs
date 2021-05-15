@@ -1,6 +1,6 @@
 /*	Author: Cruz Ramirez
  *  Partner(s) Name: 
- *	Lab Section:
+ *	Lab Section: 22
  *	Assignment: Lab 9  Exercise 2
  *	Exercise Description: [optional - include for your own benefit]
  *	Create a concurrent sm with two different tasks, one faster than the other.
