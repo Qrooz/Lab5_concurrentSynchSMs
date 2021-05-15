@@ -102,7 +102,7 @@ void TickFct_LED1(){
 			}
 		break;
 
-		case LED3_Three:
+		case LED1_Three:
 			if(i >= 1000){
 				LED1_STATE = LED1_One;
 			}
@@ -140,7 +140,7 @@ void TickFct_LED1(){
 //second SM
 enum LED2_STATES{LED2_Start, LED2_On, LED2_Off}LED2_STATE;
 
-TickFct_LED2(){
+void TickFct_LED2(){
 	
 	switch(LED2_STATE){ //state transitions for 2nd SM
 		case LED2_Start:
@@ -190,7 +190,7 @@ TickFct_LED2(){
 
 enum COM_STATES{COM_Wait, COM_Update}COM_STATE;
 
-TickFct_COM(){
+void TickFct_COM(){
 	
 	switch(COM_STATE){ //state transitions for 3rd SM
 		case COM_Wait:
@@ -240,9 +240,9 @@ int main(void) {
 	//call tick functions
 	TickFct_LED1();
 	TickFct_LED2();
-	TickFct_COM;
+	TickFct_COM();
 	
-	++i //increment global counter
+	++i; //increment global counter
 	if(i > 1000){ //reset counter after a second
 		i = 0;
 	}
